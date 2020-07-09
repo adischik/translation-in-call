@@ -1,5 +1,6 @@
 import React from 'react';
 import NexmoClientWidget from './components/NexmoClientWidget';
+import LoggedArea from './components/LoggedArea';
 import './App.css';
 
 const TOKEN = "<YOUR_TOKEN>"
@@ -7,7 +8,8 @@ const TOKEN = "<YOUR_TOKEN>"
 function App() {
   return (
     <div className="App">
-      <NexmoClientWidget token={TOKEN}  />
+      {/* <NexmoClientWidget token={TOKEN}  /> */}
+      <LoggedArea />
     </div>
   );
 }

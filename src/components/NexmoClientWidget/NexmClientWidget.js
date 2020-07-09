@@ -1,4 +1,4 @@
-import React from '../../../node_modules/react';
+import React from 'react';
 
 const Me = ({me}) => {
   if (!me)
@@ -17,7 +17,7 @@ class NexmoClientWidget extends React.Component {
 
   componentDidMount() {
     const isServer = typeof window === 'undefined'
-    const NexmoClient = !isServer ? require('../../../node_modules/nexmo-client') : null
+    const NexmoClient = !isServer ? require('nexmo-client') : null
     if(NexmoClient){
       const nexmoClient = new NexmoClient({ debug: false })
       nexmoClient
@@ -47,7 +47,6 @@ class NexmoClientWidget extends React.Component {
     const {nexmoApp} = this.state
     return (
       <div>
-        <h2>ClientSDK Tutorial </h2>
         <Me me={this.state.me} />
       </div>
     );
